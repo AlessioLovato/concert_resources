@@ -16,19 +16,19 @@
   "bodies": [
     {
       "ID": "474_link",
-      "mass": 1.5,
+      "mass": 1.647,
       "inertia": [ 
-        [1e-01,   0.0, 0.0],
-        [0.0,  1e-01,  0.0],
-        [0.0, 0.0,  3e-03]
+        [2.26e-02,   0.0,       0.0],
+        [0.0,        2.26e-02,  0.0],
+        [0.0,        0.0,       3.46e-03]
       ],
-      "r_com": [0.0, 0.0, 0.15],
+      "r_com": [0.0, 0.0, 0.135],
       "visual": [
         {
-          "type":"cylinder",
+          "type":"mesh",
           "parameters": {
-            "radius": 0.0675,
-            "length": 0.3,
+            "file": "package://concert_resources/models/modular/meshes/concert/mesh_passive_300.stl",
+            "scale": [0.001, 0.001, 0.001],
             "color": {
               "material_name": "grey"
             }
@@ -36,7 +36,7 @@
           "pose": [
             [1,0,0,0],
             [0,1,0,0],
-            [0,0,1,0.15],
+            [0,0,1,0],
             [0,0,0,1]
           ]
         }

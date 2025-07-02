@@ -13,8 +13,8 @@
         "disabled": false
     },
     "parameters": {
-        "length": 0.27,
-        "radius": 0.050,
+        "length": 0.50,
+        "radius": 0.025,
         "mass": 1.8
     }
 }

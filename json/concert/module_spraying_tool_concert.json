@@ -1,42 +1,42 @@
 {
     "header": {
-      "ID": "3440",
-      "name": "concert/passive_end_effector_panel.json",
-      "date":"2022-11-16",
+      "ID": "3340",
+      "name": "concert/module_spraying_tool_concert.json",
+      "date":"2024-07-02",
       "author": "EdaordoRomiti",
       "affiliation": "IIT",
       "email": "edoardo.romiti@iit.it",
       "cost": 0,
-      "type": "end_effector",
+      "type": "spraying_tool",
       "family": "alberoboticsGenB",
-      "label": "Passive End-Effector (Panel)",
+      "label": "Spraying Tool",
       "addons": [],
       "disabled": false
     },
     "bodies": [
       {
-        "ID": "344_link",
-        "mass": 1.082,
+        "ID": "334_link",
+        "mass": 1.8,
         "inertia": [ 
-          [5.9346375e-03,  5.6520001e-06, 1.5027493e-04],
-          [5.6520001e-06,  5.7244771e-03,  1.8195325e-05],
-          [1.5027493e-04,  1.8195325e-05,  2.8905654e-03]
+          [4.9783517e-04,   8.1965703e-06, 3.3027183e-03],
+          [8.1965703e-06,  1.3661192e-03,  -1.9372690e-06],
+          [3.3027183e-03,  -1.9372690e-06,  1.0214692e-03]
         ],
-        "r_com": [-0.020, 0.0, 0.051],
+        "r_com": [0.0062, 0.0, 0.1028],
         "visual": [
           {
             "type":"mesh",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/passive_end_effector_panel.stl",
+              "file": "package://concert_resources/models/modular/meshes/concert/spray_tool_mesh.stl",
               "scale": [0.001, 0.001, 0.001],
               "color": {
               "material_name": "grey"
             }
             },
             "pose": [
-              [1,0,0,-0.0245],
-              [0,1,0,0],
-              [0,0,1,0],
+              [0,-1,0,0],
+              [1,0,0,0],
+              [0,0,-1,0.012],
               [0,0,0,1]
             ]
           }
@@ -45,20 +45,20 @@
           {
             "type":"mesh",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/simple/passive_end_effector_panel.stl",
+              "file": "package://concert_resources/models/modular/meshes/concert/spray_tool_mesh.stl",
               "scale": [0.001, 0.001, 0.001]
             },
             "pose": [
-              [1,0,0,-0.0245],
-              [0,1,0,0],
-              [0,0,1,0],
+              [0,-1,0,0],
+              [1,0,0,0],
+              [0,0,-1,0.012],
               [0,0,0,1]
             ]
           }
         ],
         "connectors": [
           {
-            "ID": "344_connector_1",
+            "ID": "334_connector_1",
             "pose": [
               [1, 0,  0,  0.0],
               [0, 1,  0,  0.0],
@@ -70,11 +70,11 @@
             "size": "large"
           },
           {
-            "ID": "344_connector_2",
+            "ID": "334_connector_2",
             "pose": [
-              [1, 0,  0,  0.0],
+              [1, 0,  0,  -0.086],
               [0, 1,  0,  0.0],
-              [0, 0,  1,  0.1],
+              [0, 0,  1,  0.1845],
               [0, 0,  0,  1]
             ],
             "gender": "e",

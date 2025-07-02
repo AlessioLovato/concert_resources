@@ -1,64 +1,71 @@
 {
     "header": {
-      "ID": "3440",
-      "name": "concert/passive_end_effector_panel.json",
+      "ID": "3660",
+      "name": "sanding/passive_ee_sanding_giraffe_disk.json",
       "date":"2022-11-16",
-      "author": "EdaordoRomiti",
+      "author": "EdoardoRomiti",
       "affiliation": "IIT",
       "email": "edoardo.romiti@iit.it",
       "cost": 0,
       "type": "end_effector",
       "family": "alberoboticsGenB",
-      "label": "Passive End-Effector (Panel)",
+      "label": "Passive End-Effector Sanding Giraffe Disk",
       "addons": [],
-      "disabled": false
+      "disabled": false,
+      "offsets": {
+        "pitch": [-0.4, -0.2]
+      }
     },
     "bodies": [
       {
-        "ID": "344_link",
-        "mass": 1.082,
+        "ID": "3660_link",
+        "mass": 1.0,
         "inertia": [ 
-          [5.9346375e-03,  5.6520001e-06, 1.5027493e-04],
-          [5.6520001e-06,  5.7244771e-03,  1.8195325e-05],
-          [1.5027493e-04,  1.8195325e-05,  2.8905654e-03]
+          [3e-03,  0.0, 0.0],
+          [0.0,  3e-03,  0.0],
+          [0.0,  0.0,  6e-03]
         ],
-        "r_com": [-0.020, 0.0, 0.051],
+        "r_com": [0.0, 0.0, 0.045],
         "visual": [
           {
-            "type":"mesh",
+            "type":"cylinder",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/passive_end_effector_panel.stl",
-              "scale": [0.001, 0.001, 0.001],
+              "radius": 0.1125,
+              "length": 0.09,
               "color": {
-              "material_name": "grey"
-            }
+                "material_name": "sander",
+                "rgba": [1,0.78, 0.87, 1]
+              }
             },
             "pose": [
-              [1,0,0,-0.0245],
+              [1,0,0,0],
               [0,1,0,0],
-              [0,0,1,0],
+              [0,0,1,0.045],
               [0,0,0,1]
             ]
           }
         ],
         "collision": [
           {
-            "type":"mesh",
+            "type":"cylinder",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/simple/passive_end_effector_panel.stl",
-              "scale": [0.001, 0.001, 0.001]
+              "radius": 0.1125,
+              "length": 0.09,
+              "color": {
+                "material_name": "grey"
+              }
             },
             "pose": [
-              [1,0,0,-0.0245],
+              [1,0,0,0],
               [0,1,0,0],
-              [0,0,1,0],
+              [0,0,1,0.045],
               [0,0,0,1]
             ]
           }
         ],
         "connectors": [
           {
-            "ID": "344_connector_1",
+            "ID": "3660_connector_1",
             "pose": [
               [1, 0,  0,  0.0],
               [0, 1,  0,  0.0],
@@ -66,15 +73,15 @@
               [0, 0,  0,  1]
             ],
             "gender": "f",
-            "type": "clamp",
+            "type": "gymbal",
             "size": "large"
           },
           {
-            "ID": "344_connector_2",
+            "ID": "3660_connector_2",
             "pose": [
               [1, 0,  0,  0.0],
               [0, 1,  0,  0.0],
-              [0, 0,  1,  0.1],
+              [0, 0,  1,  0.09],
               [0, 0,  0,  1]
             ],
             "gender": "e",
@@ -90,7 +97,7 @@
             "kd": 1.0,
             "maxVel": 0.0,
             "minDepth": 0.0001,
-            "material": "Gazebo/Grey",
+            "material": "Gazebo/PurpleGlow ",
             "selfCollide": true
           }
         ]

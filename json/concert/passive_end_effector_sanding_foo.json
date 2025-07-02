@@ -1,7 +1,7 @@
 {
     "header": {
-      "ID": "3440",
-      "name": "concert/passive_end_effector_panel.json",
+      "ID": "3640",
+      "name": "concert/passive_end_effector_sanding_foo.json",
       "date":"2022-11-16",
       "author": "EdaordoRomiti",
       "affiliation": "IIT",
@@ -9,14 +9,14 @@
       "cost": 0,
       "type": "end_effector",
       "family": "alberoboticsGenB",
-      "label": "Passive End-Effector (Panel)",
+      "label": "Passive End-Effector Sanding Foo",
       "addons": [],
       "disabled": false
     },
     "bodies": [
       {
         "ID": "344_link",
-        "mass": 1.082,
+        "mass": 1.762,
         "inertia": [ 
           [5.9346375e-03,  5.6520001e-06, 1.5027493e-04],
           [5.6520001e-06,  5.7244771e-03,  1.8195325e-05],
@@ -25,33 +25,34 @@
         "r_com": [-0.020, 0.0, 0.051],
         "visual": [
           {
-            "type":"mesh",
+            "type":"cylinder",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/passive_end_effector_panel.stl",
-              "scale": [0.001, 0.001, 0.001],
+              "radius": 0.075,
+              "length": 0.135,
               "color": {
-              "material_name": "grey"
-            }
+                "material_name": "sander",
+                "rgba": [1,0.78, 0.87, 1]
+              }
             },
             "pose": [
-              [1,0,0,-0.0245],
+              [1,0,0,0],
               [0,1,0,0],
-              [0,0,1,0],
+              [0,0,1,0.0675],
               [0,0,0,1]
             ]
           }
         ],
         "collision": [
           {
-            "type":"mesh",
+            "type":"cylinder",
             "parameters": {
-              "file": "package://concert_resources/models/modular/meshes/concert/simple/passive_end_effector_panel.stl",
-              "scale": [0.001, 0.001, 0.001]
+              "radius": 0.075,
+              "length": 0.135
             },
             "pose": [
-              [1,0,0,-0.0245],
+              [1,0,0,0],
               [0,1,0,0],
-              [0,0,1,0],
+              [0,0,1,0.0675],
               [0,0,0,1]
             ]
           }
@@ -74,7 +75,7 @@
             "pose": [
               [1, 0,  0,  0.0],
               [0, 1,  0,  0.0],
-              [0, 0,  1,  0.1],
+              [0, 0,  1,  0.135],
               [0, 0,  0,  1]
             ],
             "gender": "e",
@@ -90,7 +91,7 @@
             "kd": 1.0,
             "maxVel": 0.0,
             "minDepth": 0.0001,
-            "material": "Gazebo/Grey",
+            "material": "Gazebo/PurpleGlow ",
             "selfCollide": true
           }
         ]

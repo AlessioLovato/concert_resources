@@ -25,18 +25,18 @@
       "r_com": [0.0, 0.0, 0.3],
       "visual": [
         {
-          "type":"cylinder",
+          "type":"mesh",
           "parameters": {
-            "radius": 0.1,
-            "length": 0.655,
+            "file": "package://concert_resources/models/modular/meshes/concert/mesh_colonna_600.stl",
+            "scale": [0.001, 0.001, 0.001],
             "color": {
               "material_name": "grey"
             }
           },
           "pose": [
-            [1,0,0,0],
-            [0,1,0,0],
-            [0,0,1,0.3115],
+            [-1,0,0,0],
+            [0,-1,0,0],
+            [0,0,1,0],
             [0,0,0,1]
           ]
         }
@@ -74,7 +74,7 @@
           "pose": [
             [1, 0,  0,  0.0],
             [0, 1,  0,  0.0],
-            [0, 0,  1,  0.639],
+            [0, 0,  1,  0.629],
             [0, 0,  0,  1]
           ],
           "gender": "m",
